@@ -3,7 +3,7 @@ import React from 'react';
 import { Config } from "../../core/types";
 import { useStable } from "../../core/useStable";
 
-export const useZodExternal = <T>(schema: z.ZodType<T>, externalFunc: () => any, config?: Config) => {
+export const useExternal = <T>(schema: z.ZodType<T>, externalFunc: () => any, config?: Config) => {
   type S = z.infer<typeof schema>;
 
   const [isPending, setIsPending] = React.useState<boolean>(true);
